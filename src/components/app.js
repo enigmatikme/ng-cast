@@ -4,9 +4,9 @@ angular.module('video-player')
       this.loadVideos = function(videos) {
         this.videos = videos;
         this.selectVideo(videos[0]);
-      };
+      }.bind(this);
       this.$onInit = function() {
-        youTube.search('AngularJS', this.loadVideos.bind(this));
+        youTube.search('AngularJS', this.loadVideos);
       };
       this.selectVideo = (video) => {
         this.currentVideo = video;
