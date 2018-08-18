@@ -4,9 +4,10 @@ angular.module('video-player')
     bindings: {
       result: '<'
     },
-    controller: function () {
+    controller: function (youTube) {
       this.result = function () {
       };
+      this.youtubeSearch = youTube.search;
     },
     templateUrl: 'src/templates/search.html'
   });

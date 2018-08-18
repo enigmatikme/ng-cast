@@ -5,7 +5,15 @@ angular.module('video-player')
       video: '<'
     },
     controller: function () {
-      this.video = {};
+      this.getIframeSrc = function(videoId) {
+        return 'https://www.youtube.com/embed/' + videoId;
+      };
+      this.isVideoAvailable = function() {
+        if (this.video !== undefined) {
+          return true;
+        } 
+        return false; 
+      };
     },
     templateUrl: 'src/templates/videoPlayer.html'
   });
