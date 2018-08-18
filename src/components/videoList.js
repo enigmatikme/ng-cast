@@ -3,7 +3,8 @@ angular.module('video-player')
     // TODO
     bindings: {
       onClick: '<',
-      videos: '<'
+      videos: '<',
+      selectVideo: '<'
     },
     controller: function () {
       this.videos = [];
